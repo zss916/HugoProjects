@@ -11,6 +11,16 @@ android {
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        //ARouter
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+
+        //multiDex
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -32,29 +42,49 @@ dependencies {
     implementation rootProject.ext.dependencies["appcompat-v7"]
     implementation rootProject.ext.dependencies["support-v4"]
 
-    compile rootProject.ext.dependencies["constraint-layout"]
-    compile rootProject.ext.dependencies["rxlifecycle2"]
-    compile rootProject.ext.dependencies["rxlifecomponents"]
+    implementation rootProject.ext.dependencies["constraint-layout"]
 
-    compile rootProject.ext.dependencies["fragmentation"]
+    //解决64k
+    implementation rootProject.ext.dependencies["multidex"]
 
+    //网络框架
+    implementation rootProject.ext.dependencies["retrofit2"]
+    implementation rootProject.ext.dependencies["converter-scalars"]
+    implementation rootProject.ext.dependencies["converter-gson"]
+    implementation rootProject.ext.dependencies["adapter-rxjava2"]
+
+    //网络图片框架
+    implementation rootProject.ext.dependencies["glide"]
+
+    //dagger2
     compile rootProject.ext.dependencies["dagger"]
     annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
 
-    compile rootProject.ext.dependencies["utilcode"]
+    //ui路由框架
     compile rootProject.ext.dependencies["arouter-api"]
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 
-    implementation rootProject.ext.dependencies["butterknife"]
+    //rx
+    implementation rootProject.ext.dependencies["rxlifecycle2"]
+    implementation rootProject.ext.dependencies["rxlifecomponents"]
+    implementation rootProject.ext.dependencies["rxjava"]
+    implementation rootProject.ext.dependencies["rxandroid"]
+    implementation rootProject.ext.dependencies["rxbinding2"]
 
-    compile rootProject.ext.dependencies["retrofit2"]
-    compile rootProject.ext.dependencies["converter-scalars"]
-    compile rootProject.ext.dependencies["converter-gson"]
-    compile rootProject.ext.dependencies["adapter-rxjava2"]
-
+    //ui尺寸适配
     implementation project(':common')
 
+    //工具库
+    implementation rootProject.ext.dependencies["utilcode"]
 
+    //butterknife
+    implementation rootProject.ext.dependencies["butterknife"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
 
+    //一Activity多fragment的UI框架
+    implementation rootProject.ext.dependencies["fragmentation"]
+
+    //开源数据库
 
 
 

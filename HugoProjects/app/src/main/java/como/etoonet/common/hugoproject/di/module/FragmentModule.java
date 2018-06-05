@@ -1,3 +1,4 @@
+
 package como.etoonet.common.hugoproject.di.module;
 
 import android.app.Activity;
@@ -10,9 +11,19 @@ import como.etoonet.common.hugoproject.di.scope.PerFragment;
 import dagger.Module;
 import dagger.Provides;
 
+
+
+import android.app.Activity;
+import android.content.Context;
+
+import como.etoonet.common.hugoproject.di.scope.ContextLife;
+import dagger.Module;
+import dagger.Provides;
+
 /**
  * Created by lw on 2017/1/19.
  */
+
 @Module
 public class FragmentModule {
     private Fragment mFragment;
@@ -40,3 +51,4 @@ public class FragmentModule {
         return mFragment;
     }
 }
+

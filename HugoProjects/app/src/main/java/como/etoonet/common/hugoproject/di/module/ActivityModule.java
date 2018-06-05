@@ -1,3 +1,4 @@
+
 package como.etoonet.common.hugoproject.di.module;
 
 import android.app.Activity;
@@ -7,9 +8,11 @@ import como.etoonet.common.hugoproject.di.scope.PerActivity;
 import dagger.Module;
 import dagger.Provides;
 
+
 /**
  * Created by lw on 2017/1/19.
  */
+
 @Module
 public class ActivityModule {
     private Activity mActivity;
@@ -31,3 +34,4 @@ public class ActivityModule {
         return mActivity;
     }
 }
+

@@ -2,6 +2,7 @@ package como.etoonet.common.hugoproject.base;
 
 import android.app.Application;
 import android.content.Context;
+import android.support.multidex.MultiDex;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.blankj.utilcode.util.Utils;
@@ -16,7 +17,7 @@ import me.yokeyword.fragmentation.Fragmentation;
  * Created by Administrator on 2018/6/4.
  */
 
-public class App extends Application{
+public class App extends Application {
     private static App mInstance;
     private ApplicationComponent mApplicationComponent;
 
@@ -24,6 +25,8 @@ public class App extends Application{
     public void onCreate() {
         super.onCreate();
         mInstance = this;
+        //初始化MultiDex
+        MultiDex.install(this);
         //初始化application插件
         initApplicationComponent();
         //初始化工具库
@@ -36,7 +39,6 @@ public class App extends Application{
                 .debug(BuildConfig.DEBUG)
                 .install();
     }
-
 
     /**
      * 初始化路由
@@ -51,12 +53,10 @@ public class App extends Application{
 
     /**
      * 初始化ApplicationComponent，
-     *
      */
     private void initApplicationComponent() {
         mApplicationComponent = DaggerApplicationComponent.builder()
-                .applicationModule(new ApplicationModule(this))
-                .build();
+                .applicationModule(new ApplicationModule(this)).build();
     }
 
     public static Context getAppContext() {

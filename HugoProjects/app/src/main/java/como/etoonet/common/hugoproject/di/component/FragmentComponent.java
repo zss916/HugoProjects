@@ -1,3 +1,4 @@
+
 package como.etoonet.common.hugoproject.di.component;
 
 import android.app.Activity;
@@ -9,9 +10,11 @@ import como.etoonet.common.hugoproject.di.scope.ContextLife;
 import como.etoonet.common.hugoproject.di.scope.PerFragment;
 import dagger.Component;
 
+
 /**
  * Created by lw on 2017/1/19.
  */
+
 @PerFragment
 @Component(dependencies = ApplicationComponent.class, modules = FragmentModule.class)
 public interface FragmentComponent {
@@ -23,7 +26,8 @@ public interface FragmentComponent {
 
     Activity getActivity();
 
-   /* void inject(HomeFragment fragment);
+
+/* void inject(HomeFragment fragment);
 
     void inject(KnowledgeSystemFragment fragment);
 
@@ -32,4 +36,6 @@ public interface FragmentComponent {
     void inject(ArticleListFragment fragment);
 
     void inject(HotFragment fragment);*/
+
 }
+

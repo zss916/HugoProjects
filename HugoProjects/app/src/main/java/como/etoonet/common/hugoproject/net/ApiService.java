@@ -5,7 +5,6 @@ import java.util.List;
 
 import como.etoonet.common.hugoproject.bean.Banner;
 import como.etoonet.common.hugoproject.bean.DataResponse;
-import como.etoonet.common.hugoproject.bean.KnowledgeSystem;
 import io.reactivex.Observable;
 import retrofit2.http.GET;
 
@@ -37,9 +36,9 @@ public interface ApiService {
      *
      * @return BannerResponse
      */
-    @GET("/tree/json")
+   /* @GET("/tree/json")
     Observable<DataResponse<List<KnowledgeSystem>>> getKnowledgeSystems();
-
+*/
     /*
     @GET("/tree/json")
     Observable<DataResponse<List<KnowledgeSystem>>> getKnowledgeSystems();

@@ -1,3 +1,4 @@
+/*
 package como.etoonet.common.hugoproject.bean;
 
 import android.content.Context;
@@ -10,9 +11,11 @@ import java.util.List;
 
 import como.etoonet.common.hugoproject.utils.GsonUtils;
 
+*/
 /**
  * Created by lw on 2018/1/22.
- */
+ *//*
+
 @Route(path = "/service/json")
 public class KnowledgeSystem implements SerializationService {
 
@@ -101,7 +104,8 @@ public class KnowledgeSystem implements SerializationService {
     }
 
     public static class ChildrenBean implements SerializationService {
-        /**
+        */
+/**
          * id : 60
          * name : Android Studio相关
          * courseId : 13
@@ -109,7 +113,8 @@ public class KnowledgeSystem implements SerializationService {
          * order : 1000
          * visible : 1
          * children : []
-         */
+         *//*
+
 
         private int id;
         private String name;
@@ -203,3 +208,4 @@ public class KnowledgeSystem implements SerializationService {
 
 
 }
+*/

@@ -24,6 +24,9 @@ ext {
             "cardview"                  : "com.android.support:cardview-v7:${dependVersion.support}",
             "preference"                : "com.android.support:preference-v14:25.3.1",
 
+            //解决64k,方法数超过65535
+            "multidex"                  : "com.android.support:multidex:1.0.3",
+
             //http
             "retrofit2"                 : "com.squareup.retrofit2:retrofit:2.1.0",
             "converter-scalars"         : "com.squareup.retrofit2:converter-scalars:2.1.0",
@@ -89,7 +92,7 @@ ext {
             //GreenDao
             "greendao"                  : "org.greenrobot:greendao:3.2.2",
             //LitePal
-            "litePal"                   : "compile 'org.litepal.android:core:1.6.1'",
+            "litePal"                   : "org.litepal.android:core:1.6.1",
             //Realm
             //OrmLite
             //Ollie

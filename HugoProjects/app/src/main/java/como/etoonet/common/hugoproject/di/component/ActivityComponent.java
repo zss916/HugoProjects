@@ -1,3 +1,4 @@
+
 package como.etoonet.common.hugoproject.di.component;
 
 import android.app.Activity;
@@ -8,9 +9,11 @@ import como.etoonet.common.hugoproject.di.scope.ContextLife;
 import como.etoonet.common.hugoproject.di.scope.PerActivity;
 import dagger.Component;
 
+
 /**
  * Created by lw on 2017/1/19.
  */
+
 @PerActivity
 @Component(dependencies = ApplicationComponent.class, modules = ActivityModule.class)
 public interface ActivityComponent {
@@ -23,7 +26,8 @@ public interface ActivityComponent {
 
     Activity getActivity();
 
-   /* void inject(SearchActivity activity);
+
+/* void inject(SearchActivity activity);
 
     void inject(LoginActivity activity);
 
@@ -32,4 +36,6 @@ public interface ActivityComponent {
     void inject(MyCollectionActivity activity);
 
     void inject(MyBookmarkActivity activity);*/
+
 }
+

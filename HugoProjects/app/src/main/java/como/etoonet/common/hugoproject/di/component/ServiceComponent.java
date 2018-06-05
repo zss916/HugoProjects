@@ -1,3 +1,4 @@
+
 package como.etoonet.common.hugoproject.di.component;
 
 import android.content.Context;
@@ -8,9 +9,11 @@ import como.etoonet.common.hugoproject.di.scope.PerService;
 import dagger.Component;
 
 
+
 /**
  * Created by lw on 2017/1/19.
  */
+
 @PerService
 @Component(dependencies = ApplicationComponent.class, modules = ServiceModule.class)
 public interface ServiceComponent {
@@ -20,3 +23,4 @@ public interface ServiceComponent {
     @ContextLife("Application")
     Context getApplicationContext();
 }
+

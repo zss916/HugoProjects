@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.app.Application;
+
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.blankj.utilcode.util.NetworkUtils;
 import com.blankj.utilcode.util.ToastUtils;
@@ -23,7 +24,6 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import como.etoonet.common.hugoproject.R;
 import como.etoonet.common.hugoproject.di.component.ActivityComponent;
-import como.etoonet.common.hugoproject.di.component.ApplicationComponent;
 import como.etoonet.common.hugoproject.di.component.DaggerActivityComponent;
 import como.etoonet.common.hugoproject.di.module.ActivityModule;
 import me.yokeyword.fragmentation.ExtraTransaction;
