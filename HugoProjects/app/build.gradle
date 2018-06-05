@@ -70,6 +70,7 @@ dependencies {
     implementation rootProject.ext.dependencies["rxjava"]
     implementation rootProject.ext.dependencies["rxandroid"]
     implementation rootProject.ext.dependencies["rxbinding2"]
+    implementation rootProject.ext.dependencies["rxpermissions"]
 
     //ui尺寸适配
     implementation project(':common')
